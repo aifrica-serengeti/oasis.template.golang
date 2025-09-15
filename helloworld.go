@@ -23,7 +23,7 @@ func main() {
 	})
 
 	// Determine the port to listen on
-	port := os.Getenv("SERVER_PORT")
+	port := os.Getenv("SERVICE_PORT")
 	if port == "" {
 		port = "8080"
 	}
@@ -33,3 +33,4 @@ func main() {
 	// Start the Gin server
 	log.Fatal(router.Run(fmt.Sprintf(":%s", port)))
 }
+
